@@ -70,8 +70,56 @@ function addOnlyNums(...rest) {
    return total;
 };
 console.log(addOnlyNums(1, "perro", 2, 4));
- 
+
 //ejercicio 7
 
+function countTheArgs(...rest) {
+   for (let i = 0; i < rest.length; i++) {
 
+   }
+   return rest.length
+}
 
+console.log(countTheArgs("gato", "perro"));
+
+//ejercicio 8
+function combineTwoArrays(hola1, hola2) {
+   return [...hola1, ...hola2]
+}
+
+console.log(combineTwoArrays([1, 2, 6, 9], [1, 6, 8, 9]));
+
+//ejercicio 9
+function onlyUniques(...rest) {
+   let nuevoRest = [];
+   for (let i = 0; i < rest.length; i++) {
+      if (nuevoRest.includes(rest[i]) == false) {
+         nuevoRest.push(rest[i])
+      }
+   }
+   return nuevoRest
+}
+console.log(onlyUniques("gato", "pollo", "cerdo", "cerdo"));
+
+//ejercicio 10
+
+function combineAllArrays(...rest) {
+   let total = [];
+   for (let i = 0; i < rest.length; i++) {
+      total = [...total, ...rest[i]];
+   }
+   return total;
+};
+console.log(combineAllArrays([2, 7, 3, 1], [2, 7, 4, 12], [2, 44, 22, 7, 3, 1]));
+
+//ejercicio11
+
+function sumAndSquare(...rest) {
+   let total = 0;
+   for (let i = 0; i < rest.length; i++) {
+      total += (rest[i] ** 2);
+   }
+   return total;
+};
+
+console.log(sumAndSquare(3, 6, 7, 8, 2, 7, 3, 1));
